@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import videoBG from './assets/video_bg.mp4'
+import StartScreen from './components/startScreen/startScreen'
 function App() {
 
   return (
@@ -10,7 +11,7 @@ function App() {
             Seu navegador não suporta vídeos em HTML5.
         </video>
         <div className="content">
-          
+          <StartScreen/>
         </div>
     </div>
   )
