@@ -17,7 +17,7 @@ const Game = ({
     e.preventDefault();
     verifyLetter(letter);
     setLetter('')
-    inputRef.current.focus();
+    letterInputRef.current.focus();
 
   };
 
