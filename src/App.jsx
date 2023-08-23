@@ -105,7 +105,7 @@ if(guesses<=0){
             score={score}
           />
         )}
-        {gameStage === "end" && <GamerOver retry={retry} />}
+        {gameStage === "end" && <GamerOver retry={retry} score={score} />}
       </div>
     </div>
   );
