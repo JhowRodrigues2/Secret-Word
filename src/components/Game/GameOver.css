@@ -1,4 +1,13 @@
+
+h1{
+        -webkit-text-stroke: 0.6px black; 
+}
+h2{
+    -webkit-text-stroke: 0.6px black; 
+
+}
 h2 span{
-    color:#ecfa00;
+    color:#8d678d;
     font-size: 1.5em;
+
 }

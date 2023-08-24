@@ -1,8 +1,10 @@
 .start h1{
     font-size: 3.5em;
-
+    -webkit-text-stroke: 1px black; 
 }
+
 .start p{
 margin-bottom: 2em;
-color:#ecfa00;
+color:#8d678d;
+font-size: 1.2em;
 }

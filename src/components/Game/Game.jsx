@@ -20,17 +20,22 @@ const Game = ({
     letterInputRef.current.focus();
 
   };
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value.toUpperCase();
+    const lettersOnly = inputValue.replace(/[0-9]/g, '');
+    setLetter(lettersOnly);
+  };
+
 
   return (
     <div className="game">
       <p className="points">
-        <span>Pontuaçao:{score}</span>
+        <span>Pontuação: {score}</span><br/>
+        <span>Tentativas Restantes: {guesses}</span>
       </p>
-      <h1>Adivinhe a palavra:</h1>
       <h3 className="tip">
         Dica sobre a palavra: <span>{pickedCategory}</span>
       </h3>
-      <p>Você ainda tem {guesses} tentativa(s).</p>
       <div className="wordContainer">
         {letters.map((letter, index) =>
           guessedLetters.includes(letter) ? (
@@ -43,7 +48,6 @@ const Game = ({
         )}
       </div>
       <div className="letterContainer">
-        <p>Tente advinhar uma letra da palavra:</p>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -51,7 +55,7 @@ const Game = ({
             id=""
             maxLength="1"
             required
-            onChange={(e) => setLetter(e.target.value)}
+            onChange={handleInputChange}
             value={letter}
             ref={letterInputRef}
           />
@@ -59,9 +63,8 @@ const Game = ({
         </form>
       </div>
       <div className="wrongLettersContainer">
-        <p>Letras já utilizadas:</p>
-
-        {wrongLetters.map((letter, index) => (
+        <p>Letras já utilizadas: </p>
+         {wrongLetters.map((letter, index) => (
           <span key={index}>{letter}</span>
         ))}
       </div>
