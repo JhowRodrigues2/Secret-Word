@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
 import "./App.css";
 import videoBG from "./assets/video_bg.mp4";
-import StartScreen from "./components/startScreen/startScreen";
+import StartScreen from './components/startScreen/StartScreen'
 import { wordsList } from "./data/words";
 import Game from "./components/Game/Game";
 import GamerOver from "./components/Game/GamerOver";
